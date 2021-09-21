@@ -8,11 +8,37 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Vue Boolzapp</title>
     </head>
     <body>
 
-        <div id="root"></div>
+        <div id="root" class="container">
+            <div class="user-container">
+                <div class="header-user">
+                    <div class="nome-utente">
+                        <img src="img/avatar_io.jpg" alt="Io">
+                        <span>Nome Utente</span>
+                    </div>
+                    <div class="icons-user">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <div class="notifications">
+                    <i class="fas fa-bell-slash"></i>
+                    <div class="notifications-text">
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <u>Attiva notifiche desktop</u>
+                    </div>
+                </div>
+                <div class="input-text">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+            </div>
+            <div class="chat-container"></div>
+        </div>
         
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="js/contacts.js"></script>

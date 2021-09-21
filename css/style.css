@@ -5,6 +5,66 @@
 }
 
 body {
+    height: 100vh;
     font-family: 'Lato', sans-serif;
+    background: linear-gradient(to top,
+    #dbdbd2 80%, #009688 20%);
+}
+
+.container {
+    width: 80%;
+    border: 1px solid red;
+    height: 95vh;
+    margin: auto;
+    display: flex;
+}
+
+.user-container {
+    width: 40%;
+    background-color: blue;
+}
+
+.chat-container {
+    width: 60%;
+    background-color: pink;
+}
+
+.header-user {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nome-utente img {
+    width: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.icons-user i {
+    vertical-align: middle;
+    padding: 7px;
+    color: #b1b1b1;
+}
+
+.notifications {
+    background-color: #8edafc;
+    padding: 10px;
+}
+
+.notifications i {
+    padding: 10px;
+    color: #8edafc;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.notifications-text {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
 }
 
