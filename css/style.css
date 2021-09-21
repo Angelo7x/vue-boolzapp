@@ -13,20 +13,18 @@ body {
 
 .container {
     width: 80%;
-    border: 1px solid red;
-    height: 95vh;
+    height: 95%;
     margin: auto;
     display: flex;
+    padding-top: 20px;
 }
 
 .user-container {
     width: 40%;
-    background-color: blue;
 }
 
 .chat-container {
     width: 60%;
-    background-color: pink;
 }
 
 .header-user {
@@ -68,3 +66,53 @@ body {
     vertical-align: middle;
 }
 
+.input-text {
+    padding: 3px;
+    background-color: #fafafa;
+}
+
+.search {
+    width: 98%;
+}
+
+ul {
+    list-style: none;
+}
+
+.user-list {
+    overflow-y: auto;
+    background-color: white;
+    /* height: 100%; */
+}
+
+.user-list li {
+    padding: 10px
+}
+
+.chat-user {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.user-selected div {
+    display: inline-block;
+}
+
+.user-selected img {
+    width: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chat-user i {
+    vertical-align: middle;
+    padding: 7px;
+    color: #b1b1b1;
+}
+
+.chat {
+    background-image: url("../img/mine.jpg");
+    width: 100%;
+}
