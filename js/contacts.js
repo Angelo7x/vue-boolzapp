@@ -83,7 +83,9 @@ const app = new Vue ({
 				],
 			},
 		],
-		indexClicked: 0
+		indexClicked: 0,
+		newMessage: ""
+
 	},
 	methods: {
 		selected(index) {

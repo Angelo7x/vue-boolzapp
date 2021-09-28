@@ -168,3 +168,19 @@ ul {
     height: 70px;
     background-color: pink;
 }
+
+.message-input {
+    display: flex;
+    background-color: #f3eeea;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text-to-send {
+    width: 70%;
+    height: 60%;
+    padding: 10px;
+}
+
+
+
