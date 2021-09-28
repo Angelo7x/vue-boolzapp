@@ -17,6 +17,7 @@ body {
     margin: auto;
     display: flex;
     padding-top: 20px;
+    border: 1px solid black;
 }
 
 .user-container {
@@ -80,16 +81,28 @@ ul {
 }
 
 .user-list {
-    overflow-y: auto;
+    overflow-y: scroll;
     background-color: white;
-    /* height: 100%; */
 }
 
 .user-list li {
-    padding: 10px
+    padding: 10px;
+    display: flex;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px;
+}
+
+.user-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .chat-user {
+    height: 80px;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
@@ -114,5 +127,38 @@ ul {
 
 .chat {
     background-image: url("../img/mine.jpg");
-    width: 100%;
+    height: calc(100% - 150px);
+    padding: 50px;
+}
+
+.message {
+    display: flex;
+}
+
+.message.sent .message-text{
+    background-color: #d5f9ba;
+    margin-left: auto;
+}
+
+.message-text {
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.message-date {
+    position: absolute;
+    font-size: 12px;
+    right: 4px;
+    bottom: 4px;
+    color: grey;
+}
+
+
+.message-input {
+    height: 70px;
+    background-color: pink;
 }

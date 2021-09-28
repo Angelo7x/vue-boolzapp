@@ -38,7 +38,12 @@
                 </div>
                 <ul class="user-list">
                     <li v-for="(user, index) in contacts" :key="index">
-                        {{user.name}}
+                        <div class="user-img">
+                            <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
+                        </div>
+                        <div class="user-name">
+                            {{user.name}}
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -56,8 +61,21 @@
                     </div>
                 </div>
                 <div class="chat">
-                    fgdfgsdfgfdgsdfgdfgfdgfsd
+
+                    <div class="message">
+                        <div class="message-text">
+                            gfdgsdfgfsdg
+                            <div class="message-date">fdsfsdfds</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="message sent">
+                        <div class="message-text">gfdgsdfgfsdg</div>
+                    </div>
+
                 </div>
+                <div class="message-input"></div>
             </div>
         </div>
         
