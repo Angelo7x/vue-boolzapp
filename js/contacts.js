@@ -82,6 +82,13 @@ const app = new Vue ({
 					}
 				],
 			},
-		]
+		],
+		indexClicked: 0
+	},
+	methods: {
+		selected(index) {
+			this.indexClicked = index;
+
+		}
 	}
-})
+});

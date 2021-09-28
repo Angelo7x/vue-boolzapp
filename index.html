@@ -37,7 +37,7 @@
                     <input class="search" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <ul class="user-list">
-                    <li v-for="(user, index) in contacts" :key="index">
+                    <li v-for="(user, index) in contacts" :key="index" :class="index == indexClicked ? 'active' : null " @click="selected(index)">
                         <div class="user-img">
                             <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
                         </div>
@@ -50,8 +50,8 @@
             <div class="chat-container">
                 <div class="chat-user">
                     <div class="user-selected">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
-                        <div>Nome Utente</div>
+                        <img :src="`img/avatar${contacts[indexClicked].avatar}.jpg`" alt="contacts[indexClicked].name">
+                        <div>{{contacts[indexClicked].name}}</div>
                         <!-- <div class="access">Ultimo accesso oggi alle : </div> -->
                     </div>
                     <div class="chat-user">
@@ -62,16 +62,13 @@
                 </div>
                 <div class="chat">
 
-                    <div class="message">
+                    <div class="message" v-for="(message, index) in contacts[indexClicked].messages" :key="index" :class="message.status">
+
                         <div class="message-text">
-                            gfdgsdfgfsdg
-                            <div class="message-date">fdsfsdfds</div>
+                            {{message.message}}
+                            <div class="message-date">{{message.date}}</div>
                         </div>
                         
-                    </div>
-
-                    <div class="message sent">
-                        <div class="message-text">gfdgsdfgfsdg</div>
                     </div>
 
                 </div>
