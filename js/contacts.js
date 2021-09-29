@@ -103,7 +103,7 @@ const app = new Vue ({
 		this.newMessage = "";
 
 		setTimeout(() => {
-			this.contacts[this.indexCurrentContact].messages.push({
+			this.contacts[this.indexClicked].messages.push({
 				date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
 				message: 'ok',
 				status: 'recived'
