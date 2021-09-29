@@ -84,7 +84,7 @@ const app = new Vue ({
 			},
 		],
 		indexClicked: 0,
-		newMessage: ""
+		newMessage: "",
 
 	},
 	methods: {
@@ -92,5 +92,22 @@ const app = new Vue ({
 			this.indexClicked = index;
 
 		}
-	}
+	},
+	sendMessage() {
+
+			this.contacts[this.indexClicked].messages.push({
+			date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+			message: this.newMessage,
+			status: 'sent'
+		});
+		this.newMessage = "";
+
+		setTimeout(() => {
+			this.contacts[this.indexCurrentContact].messages.push({
+				date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+				message: 'ok',
+				status: 'recived'
+			});
+		}, 1000);
+	},
 });
